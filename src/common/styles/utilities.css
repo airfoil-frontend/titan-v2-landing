@@ -1,0 +1,96 @@
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: calc(var(--spacing) * 6);
+
+  @variant xs {
+    max-width: 100%;
+  }
+
+  @variant sm {
+    max-width: var(--breakpoint-sm);
+  }
+
+  @variant md {
+    max-width: 56rem;
+    padding-inline: calc(var(--spacing) * 8);
+  }
+
+  @variant lg {
+    max-width: 72rem;
+  }
+
+  @variant xl {
+    max-width: 90rem;
+  }
+}
+
+@utility focus-ring {
+  @apply focus-visible:outline-primary outline-2 outline-offset-[3px] outline-transparent;
+}
+
+@utility scrollbar {
+  ::-webkit-scrollbar {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 0.625rem;
+    border: 0.1875rem solid var(--scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@utility prose-thin-scrollbar {
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border: 0.1875rem solid rgb(14 14 19);
+    border-radius: 0.625rem;
+  }
+}
+
+@-moz-document url-prefix() {
+  .scrollbar {
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+
+  .thin-scrollbar {
+    scrollbar-width: thin;
+  }
+
+  .prose-thin-scrollbar {
+    scrollbar-width: thin;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}

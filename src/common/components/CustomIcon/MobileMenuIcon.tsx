@@ -1,10 +1,10 @@
 import { CustomIcon, CustomIconProps } from './CustomIcon';
 
-export const CrossIcon = (props: CustomIconProps) => {
+export const MobileMenuIcon = (props: CustomIconProps) => {
   return (
-    <CustomIcon height="16" viewBox="0 0 16 16" width="16" {...props}>
+    <CustomIcon height="10" viewBox="0 0 18 10" width="18" {...props}>
       <path
-        d="M2.16675 2.16667L13.8334 13.8333M13.8334 2.16667L2.16675 13.8333"
+        d="M1.5 0.833332H16.5M1.5 9.16667H16.5"
         stroke="#FAFAF9"
         strokeLinecap="square"
         strokeWidth="1.66667"

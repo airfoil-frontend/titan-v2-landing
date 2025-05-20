@@ -16,7 +16,7 @@
   html,
   body,
   #__next {
-    height: calc(
+    min-height: calc(
       100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom)
     );
   }
