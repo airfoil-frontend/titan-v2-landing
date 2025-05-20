@@ -1,9 +1,10 @@
-import { CTASection } from '@/modules/Home/CTA/CTASection';
+import { Hero } from '@/modules/Home/Hero/Hero';
 
 const Homepage = async () => {
   return (
-    <section className="grid h-full">
-      <CTASection />
+    <section className="grid">
+      <Hero />
+      {/* <CTASection /> */}
     </section>
   );
 };

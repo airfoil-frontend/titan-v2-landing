@@ -3,6 +3,7 @@ export * from './CrossIcon';
 export * from './CustomIcon';
 export * from './DiscordIcon';
 export * from './MobileMenuIcon';
+export * from './SpinnerIcon';
 export * from './TelegramIcon';
 export * from './TitanIcon';
 export * from './XIcon';
