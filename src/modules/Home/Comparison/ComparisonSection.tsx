@@ -6,7 +6,7 @@ import { useMediaQuery } from 'usehooks-ts';
 import { ComparisonItem } from './ComparisonItem';
 import { TradeSlider } from './TradeSlider';
 
-export const FeaturesSection = () => {
+export const ComparisonSection = () => {
   const [jupiterTradeDiv, setJupiterTradeDiv] = useState(15);
 
   const isMobile = useMediaQuery('(max-width: 640px)');

@@ -111,7 +111,7 @@ export const MobileMenu = () => {
             <Portal>
               <motion.div
                 animate={{ opacity: 1 }}
-                className="fixed inset-0 bg-black/50"
+                className="fixed inset-0 z-40 bg-black/50 backdrop-blur"
                 exit={{ opacity: 0 }}
                 initial={{ opacity: 0 }}
               />
