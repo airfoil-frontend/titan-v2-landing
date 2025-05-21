@@ -1,17 +1,8 @@
 import { motion } from 'motion/react';
-import { useMediaQuery } from 'usehooks-ts';
 
 import { CustomIcon, CustomIconProps } from './CustomIcon';
 
 export const TitanIcon = (props: CustomIconProps) => {
-  const isMobile = useMediaQuery('(max-width: 640px)');
-
-  const animation = {
-    animate: {
-      opacity: isMobile ? 0 : 1,
-    },
-  };
-
   return (
     <CustomIcon height="24" viewBox="0 0 137 24" width="137" {...props}>
       <path
@@ -55,27 +46,27 @@ export const TitanIcon = (props: CustomIconProps) => {
         fill="#FAFAF9"
       />
       <motion.path
-        {...animation}
+        className="opacity-0 transition-opacity sm:opacity-100"
         d="M40.3732 20.004V7.71597H35.4772V4.64397H48.5572V7.71597H43.6852V20.004H40.3732Z"
         fill="#FAFAF9"
       />
       <motion.path
-        {...animation}
+        className="opacity-0 transition-opacity sm:opacity-100"
         d="M59.5477 20.004V4.64397H62.9077V20.004H59.5477Z"
         fill="#FAFAF9"
       />
       <motion.path
-        {...animation}
+        className="opacity-0 transition-opacity sm:opacity-100"
         d="M78.806 20.004V7.71597H73.91V4.64397H86.99V7.71597H82.118V20.004H78.806Z"
         fill="#FAFAF9"
       />
       <motion.path
-        {...animation}
+        className="opacity-0 transition-opacity sm:opacity-100"
         d="M94.2228 20.004L103.127 3.99597L111.935 20.004H108.335L106.775 17.124H99.4308L97.8948 20.004H94.2228ZM100.943 14.316H105.263L103.103 10.26L100.943 14.316Z"
         fill="#FAFAF9"
       />
       <motion.path
-        {...animation}
+        className="opacity-0 transition-opacity sm:opacity-100"
         d="M122.201 20.004V4.64397H125.537L133.313 15.036V4.64397H136.673V20.004H133.361L125.561 9.63597V20.004H122.201Z"
         fill="#FAFAF9"
       />

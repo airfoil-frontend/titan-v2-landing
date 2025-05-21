@@ -7,8 +7,8 @@ import { SwapView } from '@/modules/Home/Hero/SwapView';
 
 export const Hero = () => {
   return (
-    <div className="overflow-hidden">
-      <div className="mx-auto mt-[6rem] mb-[6.25rem] w-full max-w-[1280px] px-4 sm:px-6 md:mt-[8.5rem] lg:mt-[11rem] lg:px-8">
+    <div className="mt-[6rem] mb-[6rem] overflow-hidden md:mt-[8.5rem] md:mb-[7.5rem] lg:mt-[11rem] lg:mb-[6.25rem]">
+      <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-16 lg:flex-row xl:gap-[8.5rem]">
           <div className="mx-auto max-w-[37rem] lg:flex-1">
             <h1

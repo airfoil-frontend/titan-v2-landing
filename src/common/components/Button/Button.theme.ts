@@ -27,7 +27,7 @@ export const buttonTheme = tv({
       unstyled: ['bg-transparent', 'border-none', 'focus-ring-none'],
     },
     size: {
-      md: ['px-3 py-2', 'gap-1.5', 'text-xs leading-5'],
+      md: ['px-3 py-2', 'gap-1.5', 'text-sm leading-5'],
     },
     disable: {
       true: ['cursor-not-allowed', 'opacity-50'],
