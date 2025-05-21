@@ -10,10 +10,10 @@ import { MobileMenu } from './MobileMenu';
 
 export const Header = () => {
   return (
-    <header className="sticky flex w-full flex-col items-center justify-center border-b border-gray-900 backdrop-blur-[25px]">
-      <div className="mx-auto flex h-16 w-full max-w-[1280px] items-center justify-between px-8 sm:px-6 lg:px-8">
+    <header className="z-header bg-bg-main sticky top-0 flex w-full flex-col items-center justify-center border-b border-gray-900 sm:bg-transparent sm:backdrop-blur-[25px]">
+      <div className="mx-auto flex h-16 w-full max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <TitanIcon />
-        <nav className="hidden h-16 items-center gap-10 sm:flex">
+        <nav className="hidden h-[var(--header-height)] items-center gap-10 sm:flex">
           {headerItems.map(({ href, label, external }) => (
             <HeaderItem key={label} external={external} href={href}>
               {label}

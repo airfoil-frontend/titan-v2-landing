@@ -29,8 +29,8 @@ const socials = [
 
 export const Footer = () => {
   return (
-    <footer className="w-full">
-      <div className="mx-auto flex max-w-screen-xl justify-between border-t border-gray-900 px-4 pt-6 pb-24 sm:px-6 sm:pt-4 lg:px-8">
+    <footer className="w-full border-t border-gray-900 bg-[#0C0B09]">
+      <div className="mx-auto flex max-w-screen-xl justify-between px-4 pt-6 pb-24 sm:px-6 sm:pt-4 lg:px-8">
         <span className="text-center text-sm font-light text-gray-500">
           © 2025 Titan. All rights reserved.
         </span>
