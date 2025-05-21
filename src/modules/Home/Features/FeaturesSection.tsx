@@ -1,18 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'usehooks-ts';
 
 import { ComparisonItem } from './ComparisonItem';
 import { TradeSlider } from './TradeSlider';
 
 export const FeaturesSection = () => {
+  const [jupiterTradeDiv, setJupiterTradeDiv] = useState(15);
+
+  const isMobile = useMediaQuery('(max-width: 640px)');
   const [numberOfTrades, setNumberOfTrades] = useState(500);
   const titanTradeValue = Math.round(numberOfTrades / 10);
-  const jupiterTradeValue = Math.round(numberOfTrades / 15);
+  const jupiterTradeValue = Math.round(numberOfTrades / jupiterTradeDiv);
+
+  useEffect(() => {
+    if (isMobile) {
+      setJupiterTradeDiv(25);
+    } else {
+      setJupiterTradeDiv(15);
+    }
+  }, [isMobile]);
 
   return (
     <section className="container">
-      <div className="flex w-full flex-col gap-24 px-4 py-6 md:px-6 md:py-20 lg:px-8 lg:py-24">
+      <div className="flex w-full flex-col gap-14 px-4 py-6 md:px-6 md:py-20 lg:px-8 lg:py-24">
         <div className="flex flex-col items-start gap-5 lg:max-w-[560px]">
           <h2 className="font-display text-primary text-[3rem] leading-[3.375rem] tracking-[-0.06rem]">
             Keep more of your profits
@@ -29,7 +41,7 @@ export const FeaturesSection = () => {
           setNumberOfTrades={setNumberOfTrades}
         />
 
-        <div className="flex w-full flex-col items-start gap-8">
+        <div className="flex w-full flex-col items-start gap-6 sm:gap-8">
           <ComparisonItem
             className="bg-primary"
             title="With Titan"

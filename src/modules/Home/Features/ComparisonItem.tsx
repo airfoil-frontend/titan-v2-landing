@@ -18,7 +18,7 @@ export const ComparisonItem = ({
   const commonTextClassName =
     'text-lg leading-6 font-medium tracking-[-0.0225rem]';
   return (
-    <div className="flex w-full items-center gap-8">
+    <div className="flex w-full items-center gap-4 sm:gap-8">
       <div
         className={cn('h-10 rounded-full md:h-11', className)}
         style={{ width: `${tradeValue}%` }}
