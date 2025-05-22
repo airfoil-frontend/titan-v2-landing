@@ -24,9 +24,9 @@ export const FeaturesSection = () => {
   });
 
   useMotionValueEvent(scrollYProgress, 'change', (value) => {
-    if (value < 0.3333) {
+    if (value < 0.2222) {
       setActiveSection(1);
-    } else if (value < 0.68) {
+    } else if (value < 0.5555) {
       setActiveSection(2);
     } else {
       setActiveSection(3);
