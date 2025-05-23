@@ -25,7 +25,7 @@ export const MobileMenu = () => {
       <Button
         ref={buttonRef}
         aria-label="Toggle menu"
-        className="relative z-20 block h-4 w-4 sm:hidden"
+        className="relative z-20 block h-4 w-4 after:absolute after:inset-[-.5625rem] after:z-10 sm:hidden"
         iconRight={
           <AnimatePresence initial={false} mode="popLayout">
             {isMenuOpen ? (
@@ -60,7 +60,7 @@ export const MobileMenu = () => {
           <>
             <motion.div
               animate={{ opacity: 1 }}
-              className="bg-bg-main fixed inset-x-0 top-[calc(var(--header-height)+1px)] border-b border-gray-900"
+              className="bg-bg-main fixed inset-x-0 top-[calc(var(--header-height)-1px)] border-b border-gray-900 py-4 font-light"
               exit={{ opacity: 0, transition: { delay: 0 } }}
               initial={{ opacity: 0 }}
               transition={{
@@ -89,7 +89,7 @@ export const MobileMenu = () => {
                     <li
                       key={link.href}
                       className={cn(
-                        'transition-colors duration-300 ease-in-out',
+                        'text-base leading-[1rem] tracking-[-0.01rem] text-gray-50 transition-colors duration-300 ease-in-out',
                       )}
                       onClick={() => {
                         closeMenu();
@@ -111,7 +111,7 @@ export const MobileMenu = () => {
             <Portal>
               <motion.div
                 animate={{ opacity: 1 }}
-                className="fixed inset-0 bg-black/50"
+                className="fixed inset-0 z-40 bg-black/50 backdrop-blur"
                 exit={{ opacity: 0 }}
                 initial={{ opacity: 0 }}
               />

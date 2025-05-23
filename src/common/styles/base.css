@@ -21,3 +21,32 @@
     );
   }
 }
+
+/* Custom progress bar styling */
+progress {
+  appearance: none;
+}
+
+/* For Firefox */
+progress::-moz-progress-bar {
+  background-color: #6b7280;
+}
+
+progress[value^='800']::-moz-progress-bar {
+  background-color: #f0d065;
+}
+
+/* For Chrome/Safari */
+progress::-webkit-progress-bar {
+  background-color: #1f2937;
+  border-radius: 2px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #6b7280;
+  border-radius: 2px;
+}
+
+progress[value^='800']::-webkit-progress-value {
+  background-color: #f0d065;
+}
