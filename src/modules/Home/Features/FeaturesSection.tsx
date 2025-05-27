@@ -35,7 +35,7 @@ export const FeaturesSection = () => {
 
   return (
     <>
-      <section className="container mb-[4rem] md:mb-[6rem] lg:mb-0">
+      <section className="mx-auto mb-[4rem] max-w-[1216px] px-4 md:mb-[6rem] md:px-6 lg:mb-0 lg:px-8">
         <div
           ref={sectionRef}
           className="justify-between gap-[4rem] lg:flex xl:gap-[6rem]"

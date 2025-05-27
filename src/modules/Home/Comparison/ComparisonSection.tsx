@@ -26,10 +26,10 @@ export const ComparisonSection = () => {
     <section className="container">
       <div className="flex w-full flex-col gap-14 px-4 py-6 md:px-6 md:py-20 lg:px-8 lg:py-24">
         <div className="flex flex-col items-start gap-5 lg:max-w-[560px]">
-          <h2 className="font-display text-primary text-[3rem] leading-[3.375rem] tracking-[-0.06rem]">
+          <h2 className="font-display text-primary text-[2rem] leading-[2.25rem] tracking-[-0.04rem] md:text-[2.5rem] md:leading-[2.8125rem] md:tracking-[-0.05rem] xl:text-[3rem] xl:leading-[3.375rem] xl:tracking-[-0.06rem]">
             Keep more of your profits
           </h2>
-          <p className="md:h text-lg leading-6 tracking-[-0.0112rem] text-gray-400">
+          <p className="text-base leading-[1.25rem] font-light tracking-[-0.01rem] text-gray-400 md:text-lg md:leading-6 md:tracking-[-0.0112rem]">
             Nunc integer nullam ultrices in vestibulum. Augue faucibus vitae
             quisque nisi felis. Vitae a enim ut massa et consequat. Quisque
             sagittis eget ligula non neque turpis semper. Tristique velit lacus.

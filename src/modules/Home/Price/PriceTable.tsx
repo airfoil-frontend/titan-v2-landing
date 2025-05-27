@@ -153,7 +153,7 @@ export const PriceTable = () => {
   if (!displayedAggregators.length) return <div className="w-full"></div>;
 
   return (
-    <div className="relative w-full overflow-hidden px-4 md:px-16 lg:px-15 lg:pt-10">
+    <div className="relative w-full overflow-hidden px-4 md:px-16 lg:px-15 xl:pt-10">
       <div className="bg-bg-main rounded-l-2xl rounded-r-2xl border-t border-r border-l border-[#262626] p-3">
         <div
           className="rounded-tl-lg rounded-tr-lg border-t border-r border-l border-[#292824] bg-gray-900"

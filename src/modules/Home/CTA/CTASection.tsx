@@ -15,12 +15,12 @@ export const CTASection = () => {
 
   return (
     <section className="relative min-h-[570px] overflow-hidden lg:min-h-[631px]">
-      <BackgroundGlow className="xs:top-16 absolute top-24 left-1/2 -translate-x-1/2 sm:top-10 md:top-16 xl:top-0" />
+      <BackgroundGlow className="xs:top-16 pointer-events-none absolute top-24 left-1/2 -translate-x-1/2 sm:top-10 md:top-16 xl:top-0" />
       <div className="xs:container px-14 pt-24">
-        <h2 className="text-primary font-display text-center text-5xl tracking-[-0.14rem] text-balance">
+        <h2 className="text-primary font-display text-center text-[2.5rem] leading-[2.5125rem] tracking-[-0.075rem] text-balance md:tracking-[-0.05rem] xl:text-[3.5rem] xl:leading-[3.9375rem] xl:tracking-[-0.14rem]">
           Public access open soon
         </h2>
-        <p className="mt-4 text-center text-lg font-light tracking-[-0.0112rem] text-gray-400">
+        <p className="mt-5 text-center text-base leading-[1.25rem] font-light tracking-[-0.01rem] text-gray-400 md:text-lg md:leading-6 md:tracking-[-1%]">
           Priority access available now for Titan community members.
         </p>
         <div className="xs:flex-row mt-8 flex flex-col justify-center gap-x-3 gap-y-4">

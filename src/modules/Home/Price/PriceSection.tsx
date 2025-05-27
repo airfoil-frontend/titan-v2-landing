@@ -11,11 +11,11 @@ export const PriceSection = () => {
         }}
       >
         <div className="px-0 md:px-10 xl:px-0 xl:py-[4.25rem]">
-          <div className="flex max-w-[657px] flex-col gap-5 px-4 py-10 md:px-6 md:py-16 lg:p-16 xl:min-w-[657px]">
-            <h2 className="font-display text-primary text-[2rem] leading-[2.25rem] tracking-[-2%] md:text-5xl md:tracking-[-0.06rem]">
+          <div className="flex max-w-[657px] flex-col gap-5 px-4 py-10 md:px-6 md:py-16 xl:min-w-[657px] xl:p-16">
+            <h2 className="font-display text-primary text-[2rem] leading-[2.25rem] tracking-[-2%] md:text-[2.5rem] md:leading-[2.8125rem] md:tracking-[-0.05rem] xl:text-5xl xl:leading-[3.375rem] xl:tracking-[-0.06rem]">
               Solana&apos;s original meta DEX aggregator
             </h2>
-            <p className="text-lg leading-6 font-light tracking-[-1%] text-gray-400">
+            <p className="text-base leading-[1.25rem] font-light tracking-[-0.01rem] text-gray-400 md:text-lg md:leading-6 md:tracking-[-1%]">
               Titan finds the best price across Talos, Jupiter, DeFlow,
               Hashflow, and every other router on Solana.
             </p>
