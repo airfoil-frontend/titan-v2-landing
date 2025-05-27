@@ -1,3 +1,4 @@
+export * from './Aggregators';
 export * from './ChevronRightIcon';
 export * from './CrossIcon';
 export * from './CustomIcon';
