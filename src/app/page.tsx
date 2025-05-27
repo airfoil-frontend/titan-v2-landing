@@ -19,3 +19,5 @@ const Homepage = async () => {
 };
 
 export default Homepage;
+
+export const dynamic = 'force-static';
