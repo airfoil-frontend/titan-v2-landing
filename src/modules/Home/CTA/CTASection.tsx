@@ -6,20 +6,35 @@ import { ChevronRightIcon, DiscordIcon } from '@/common/components/CustomIcon';
 import { BackgroundGlow } from '@/modules/Home/CTA/BackgroundGlow';
 
 export const CTASection = () => {
+  const smoothScrollToWaitlistForm = () => {
+    const waitlistForm = document.getElementById('main');
+    if (waitlistForm) {
+      waitlistForm.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+  };
+
   return (
     <section className="relative min-h-[570px] overflow-hidden lg:min-h-[631px]">
-      <BackgroundGlow className="xs:top-24 absolute top-28 left-1/2 -translate-x-1/2 sm:top-20 md:top-16 lg:top-8 xl:top-0" />
+      <BackgroundGlow className="xs:top-16 absolute top-24 left-1/2 -translate-x-1/2 sm:top-10 md:top-16 xl:top-0" />
       <div className="xs:container px-14 pt-24">
-        <h2 className="text-primary font-display text-center text-5xl tracking-[-0.14rem]">
+        <h2 className="text-primary font-display text-center text-5xl tracking-[-0.14rem] text-balance">
           Public access open soon
         </h2>
         <p className="mt-4 text-center text-lg font-light tracking-[-0.0112rem] text-gray-400">
           Priority access available now for Titan community members.
         </p>
         <div className="xs:flex-row mt-8 flex flex-col justify-center gap-x-3 gap-y-4">
-          <Button iconRight={<ChevronRightIcon />}>Join waitlist</Button>
-          <Button iconLeft={<DiscordIcon />} variant="secondary">
-            Join Discord
+          <Button
+            iconRight={<ChevronRightIcon className="size-4" />}
+            onClick={smoothScrollToWaitlistForm}
+          >
+            <span className="pr-0.5 pl-1.5 font-medium">Join waitlist</span>
+          </Button>
+          <Button
+            iconLeft={<DiscordIcon className="size-4" />}
+            variant="secondary"
+          >
+            <span className="pr-1.5 pl-0.5 font-medium">Join our Discord</span>
           </Button>
         </div>
       </div>

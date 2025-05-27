@@ -60,6 +60,7 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
 
         {/* Shimmer circles that follow the main circle paths */}
         <circle
+          className="hidden md:block"
           cx="756.5"
           cy="1733.45"
           opacity="0.8"
@@ -68,54 +69,7 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
           strokeDasharray="8600"
           strokeDashoffset="0"
           strokeWidth="2"
-        >
-          <animate
-            attributeName="stroke-dashoffset"
-            dur="3s"
-            from="8600"
-            repeatCount="indefinite"
-            to="0"
-          />
-        </circle>
-
-        {/* Additional shimmer circles at different sizes for layered effect */}
-        <circle
-          cx="756.5"
-          cy="1733.45"
-          opacity="0.6"
-          r="1200"
-          stroke="url(#shimmerGradient)"
-          strokeDasharray="7540"
-          strokeDashoffset="0"
-          strokeWidth="1.5"
-        >
-          <animate
-            attributeName="stroke-dashoffset"
-            dur="4s"
-            from="7540"
-            repeatCount="indefinite"
-            to="0"
-          />
-        </circle>
-
-        <circle
-          cx="756.5"
-          cy="1733.45"
-          opacity="0.4"
-          r="1000"
-          stroke="url(#shimmerGradient)"
-          strokeDasharray="6280"
-          strokeDashoffset="0"
-          strokeWidth="1"
-        >
-          <animate
-            attributeName="stroke-dashoffset"
-            dur="5s"
-            from="6280"
-            repeatCount="indefinite"
-            to="0"
-          />
-        </circle>
+        ></circle>
       </g>
     </g>
     <defs>
@@ -124,7 +78,7 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
         <stop offset="0%" stopColor="rgba(242, 211, 100, 0)">
           <animate
             attributeName="offset"
-            dur="2s"
+            dur="3.5s"
             repeatCount="indefinite"
             values="0; 1"
           />
@@ -132,7 +86,7 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
         <stop offset="10%" stopColor="rgba(242, 211, 100, 0.8)">
           <animate
             attributeName="offset"
-            dur="2s"
+            dur="3.5s"
             repeatCount="indefinite"
             values="0.1; 1.1"
           />
@@ -140,7 +94,7 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
         <stop offset="20%" stopColor="rgba(242, 211, 100, 0)">
           <animate
             attributeName="offset"
-            dur="2s"
+            dur="3.5s"
             repeatCount="indefinite"
             values="0.2; 1.2"
           />
