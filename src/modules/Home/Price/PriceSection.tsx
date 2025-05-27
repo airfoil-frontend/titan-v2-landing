@@ -11,7 +11,7 @@ export const PriceSection = () => {
         }}
       >
         <div className="px-0 md:px-10 xl:px-0 xl:py-[4.25rem]">
-          <div className="flex flex-col gap-5 px-4 py-10 md:px-6 md:py-16 lg:p-16 xl:min-w-[657px]">
+          <div className="flex max-w-[657px] flex-col gap-5 px-4 py-10 md:px-6 md:py-16 lg:p-16 xl:min-w-[657px]">
             <h2 className="font-display text-primary text-[2rem] leading-[2.25rem] tracking-[-2%] md:text-5xl md:tracking-[-0.06rem]">
               Solana&apos;s original meta DEX aggregator
             </h2>

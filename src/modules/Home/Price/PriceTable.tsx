@@ -76,78 +76,81 @@ const PRICE_LIST = [
   '$10,013.00',
 ];
 
+const shuffleAggregators = () => {
+  // Create a copy of the aggregators array
+  const shuffled = [...aggregators];
+
+  // Remove Titan, Aggregator 5, and Aggregator 6
+  const titan = shuffled.find((a) => a.name === 'Titan');
+  const agg5 = shuffled.find((a) => a.name === 'Aggregator 5');
+  const agg6 = shuffled.find((a) => a.name === 'Aggregator 6');
+
+  const middleAggregators = shuffled.filter(
+    (a) =>
+      a.name !== 'Titan' &&
+      a.name !== 'Aggregator 5' &&
+      a.name !== 'Aggregator 6',
+  );
+
+  // Shuffle the middle aggregators
+  for (let i = middleAggregators.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [middleAggregators[i], middleAggregators[j]] = [
+      middleAggregators[j],
+      middleAggregators[i],
+    ];
+  }
+
+  // Determine if Titan should be first (80% chance)
+  const shouldTitanBeFirst = Math.random() < 0.8;
+
+  // Construct the final array
+  const result = [];
+
+  if (shouldTitanBeFirst && titan) {
+    // Titan gets the highest price when it's first
+    result.push({ ...titan, value: PRICE_LIST[0] });
+    // Assign remaining prices to middle aggregators
+    middleAggregators.forEach((agg, index) => {
+      result.push({ ...agg, value: PRICE_LIST[index + 1] });
+    });
+  } else {
+    // Middle aggregators get the higher prices
+    middleAggregators.forEach((agg, index) => {
+      result.push({ ...agg, value: PRICE_LIST[index] });
+    });
+    // Titan gets a lower price when not first
+    if (titan) {
+      const titanIndex = Math.floor(PRICE_LIST.length * 0.7); // 70% down the list
+      result.push({ ...titan, value: PRICE_LIST[titanIndex] });
+    }
+  }
+
+  // Always add Aggregator 5 and 6 at the end with the lowest prices
+  if (agg5) result.push({ ...agg5, value: PRICE_LIST[PRICE_LIST.length - 2] });
+  if (agg6) result.push({ ...agg6, value: PRICE_LIST[PRICE_LIST.length - 1] });
+
+  return result;
+};
+
 export const PriceTable = () => {
-  const shuffleAggregators = () => {
-    // Create a copy of the aggregators array
-    const shuffled = [...aggregators];
-
-    // Remove Titan, Aggregator 5, and Aggregator 6
-    const titan = shuffled.find((a) => a.name === 'Titan');
-    const agg5 = shuffled.find((a) => a.name === 'Aggregator 5');
-    const agg6 = shuffled.find((a) => a.name === 'Aggregator 6');
-
-    const middleAggregators = shuffled.filter(
-      (a) =>
-        a.name !== 'Titan' &&
-        a.name !== 'Aggregator 5' &&
-        a.name !== 'Aggregator 6',
-    );
-
-    // Shuffle the middle aggregators
-    for (let i = middleAggregators.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [middleAggregators[i], middleAggregators[j]] = [
-        middleAggregators[j],
-        middleAggregators[i],
-      ];
-    }
-
-    // Determine if Titan should be first (80% chance)
-    const shouldTitanBeFirst = Math.random() < 0.8;
-
-    // Construct the final array
-    const result = [];
-
-    if (shouldTitanBeFirst && titan) {
-      // Titan gets the highest price when it's first
-      result.push({ ...titan, value: PRICE_LIST[0] });
-      // Assign remaining prices to middle aggregators
-      middleAggregators.forEach((agg, index) => {
-        result.push({ ...agg, value: PRICE_LIST[index + 1] });
-      });
-    } else {
-      // Middle aggregators get the higher prices
-      middleAggregators.forEach((agg, index) => {
-        result.push({ ...agg, value: PRICE_LIST[index] });
-      });
-      // Titan gets a lower price when not first
-      if (titan) {
-        const titanIndex = Math.floor(PRICE_LIST.length * 0.7); // 70% down the list
-        result.push({ ...titan, value: PRICE_LIST[titanIndex] });
-      }
-    }
-
-    // Always add Aggregator 5 and 6 at the end with the lowest prices
-    if (agg5)
-      result.push({ ...agg5, value: PRICE_LIST[PRICE_LIST.length - 2] });
-    if (agg6)
-      result.push({ ...agg6, value: PRICE_LIST[PRICE_LIST.length - 1] });
-
-    return result;
-  };
-
   // Use state to store the shuffled aggregators
-  const [displayedAggregators, setDisplayedAggregators] =
-    useState(shuffleAggregators());
+  const [displayedAggregators, setDisplayedAggregators] = useState<
+    typeof aggregators
+  >([]);
 
   // Update the display periodically
   useEffect(() => {
+    setDisplayedAggregators(shuffleAggregators());
+
     const interval = setInterval(() => {
       setDisplayedAggregators(shuffleAggregators());
     }, 2000); // Update every 2 seconds
 
     return () => clearInterval(interval);
   }, []);
+
+  if (!displayedAggregators.length) return <div className="w-full"></div>;
 
   return (
     <div className="relative w-full overflow-hidden px-4 md:px-16 lg:px-15 lg:pt-10">
@@ -183,11 +186,11 @@ export const PriceTable = () => {
                   initial={{ opacity: 0 }}
                   layoutId={aggregator.name}
                   transition={{
-                    type: 'spring',
-                    stiffness: 100,
-                    damping: 20,
-                    mass: 1.2,
-                    layout: { duration: 0.7 },
+                    layout: {
+                      type: 'spring',
+                      stiffness: 150,
+                      damping: 25,
+                    },
                     opacity: { duration: 0.3 },
                   }}
                 >
