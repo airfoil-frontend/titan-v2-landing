@@ -7,18 +7,18 @@ import { ComparisonItem } from './ComparisonItem';
 import { TradeSlider } from './TradeSlider';
 
 export const ComparisonSection = () => {
-  const [jupiterTradeDiv, setJupiterTradeDiv] = useState(15);
+  const [jupiterTradeDiv, setJupiterTradeDiv] = useState(20);
 
   const isMobile = useMediaQuery('(max-width: 640px)');
   const [numberOfTrades, setNumberOfTrades] = useState(500);
-  const titanTradeValue = Math.round(numberOfTrades / 10);
+  const titanTradeValue = Math.round(numberOfTrades / 8);
   const jupiterTradeValue = Math.round(numberOfTrades / jupiterTradeDiv);
 
   useEffect(() => {
     if (isMobile) {
       setJupiterTradeDiv(25);
     } else {
-      setJupiterTradeDiv(15);
+      setJupiterTradeDiv(20);
     }
   }, [isMobile]);
 
