@@ -3,10 +3,12 @@
 import {
   AnimatePresence,
   motion,
+  useAnimate,
+  useInView,
   useMotionValueEvent,
   useScroll,
 } from 'motion/react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { cn } from '@/common/functions/cn';
 
@@ -26,7 +28,7 @@ export const FeaturesSection = () => {
   useMotionValueEvent(scrollYProgress, 'change', (value) => {
     if (value < 0.2222) {
       setActiveSection(1);
-    } else if (value < 0.5555) {
+    } else if (value < 0.65) {
       setActiveSection(2);
     } else {
       setActiveSection(3);
@@ -82,7 +84,7 @@ export const FeaturesSection = () => {
                   title="Titan's Talos algorithm"
                 />
               </div>
-              <div className="lg:hidden">
+              <div className="[@media(min-width:1024px)_and_(min-height:950px)]:hidden">
                 <div className="mb-8 flex flex-wrap items-center gap-x-8 gap-y-4">
                   <div className="flex items-center gap-2.5">
                     <svg
@@ -126,87 +128,7 @@ export const FeaturesSection = () => {
                   </div>
                 </div>
                 <div>
-                  <svg
-                    className="size-full"
-                    fill="none"
-                    height="284"
-                    viewBox="0 0 561 284"
-                    width="561"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 31H560"
-                      stroke="#292824"
-                      strokeDasharray="2 2"
-                    />
-                    <path
-                      d="M0 75.4H560"
-                      stroke="#292824"
-                      strokeDasharray="2 2"
-                    />
-                    <path
-                      d="M0 119.8H560"
-                      stroke="#292824"
-                      strokeDasharray="2 2"
-                    />
-                    <path
-                      d="M0 164.2H560"
-                      stroke="#292824"
-                      strokeDasharray="2 2"
-                    />
-                    <path
-                      d="M0 208.6H560"
-                      stroke="#292824"
-                      strokeDasharray="2 2"
-                    />
-                    <path
-                      d="M0 253H560"
-                      stroke="#292824"
-                      strokeDasharray="2 2"
-                    />
-                    <mask
-                      height="266"
-                      id="mask0_4124_107"
-                      maskUnits="userSpaceOnUse"
-                      style={{ maskType: 'alpha' }}
-                      width="640"
-                      x="0"
-                      y="9"
-                    >
-                      <rect
-                        fill="url(#paint0_linear_4124_107)"
-                        height="266"
-                        width="640"
-                        y="9"
-                      />
-                    </mask>
-                    <g mask="url(#mask0_4124_107)">
-                      <path
-                        d="M0 275C64.8984 251.97 276.989 209.939 560 9"
-                        stroke="#F2D364"
-                      />
-                      <path
-                        d="M0 275C64.8984 259.675 276.989 231.708 560 98"
-                        stroke="#E7E6E4"
-                        strokeDasharray="4 4"
-                      />
-                    </g>
-                    <defs>
-                      <linearGradient
-                        gradientUnits="userSpaceOnUse"
-                        id="paint0_linear_4124_107"
-                        x1="0"
-                        x2="640"
-                        y1="142"
-                        y2="142"
-                      >
-                        <stop stopColor="white" stopOpacity="0" />
-                        <stop offset="0.15" stopColor="white" />
-                        <stop offset="0.85" stopColor="white" />
-                        <stop offset="1" stopColor="white" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
+                  <Graph />
                 </div>
               </div>
             </div>
@@ -240,7 +162,7 @@ export const FeaturesSection = () => {
                   title="Best execution"
                 />
               </div>
-              <div className="lg:hidden">
+              <div className="[@media(min-width:1024px)_and_(min-height:950px)]:hidden">
                 <div className="border-b border-[rgba(39,_39,_42,_0.80)] py-4 font-mono text-sm font-medium tracking-[.0625rem] uppercase">
                   Quote update time
                 </div>
@@ -288,12 +210,12 @@ export const FeaturesSection = () => {
                   title="Swap with no fees"
                 />
               </div>
-              <div className="lg:hidden">
+              <div className="[@media(min-width:1024px)_and_(min-height:950px)]:hidden">
                 <SwapWithNoFees />
               </div>
             </div>
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden [@media(min-width:1024px)_and_(min-height:950px)]:block">
             <div className="sticky top-[calc(var(--header-height)+20rem)] grid place-items-center">
               <div className="relative grid w-[28rem] place-items-center xl:w-[37.5rem]">
                 <AnimatePresence initial={false} mode="popLayout">
@@ -347,93 +269,8 @@ export const FeaturesSection = () => {
                           </span>
                         </div>
                       </div>
-                      <div>
-                        <svg
-                          className="size-full"
-                          fill="none"
-                          height="284"
-                          viewBox="0 0 561 284"
-                          width="561"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0 31H560"
-                            stroke="#292824"
-                            strokeDasharray="2 2"
-                          />
-                          <path
-                            d="M0 75.4H560"
-                            stroke="#292824"
-                            strokeDasharray="2 2"
-                          />
-                          <path
-                            d="M0 119.8H560"
-                            stroke="#292824"
-                            strokeDasharray="2 2"
-                          />
-                          <path
-                            d="M0 164.2H560"
-                            stroke="#292824"
-                            strokeDasharray="2 2"
-                          />
-                          <path
-                            d="M0 208.6H560"
-                            stroke="#292824"
-                            strokeDasharray="2 2"
-                          />
-                          <path
-                            d="M0 253H560"
-                            stroke="#292824"
-                            strokeDasharray="2 2"
-                          />
-                          <mask
-                            height="266"
-                            id="mask0_4124_107"
-                            maskUnits="userSpaceOnUse"
-                            style={{ maskType: 'alpha' }}
-                            width="640"
-                            x="0"
-                            y="9"
-                          >
-                            <rect
-                              fill="url(#paint0_linear_4124_107)"
-                              height="266"
-                              width="640"
-                              y="9"
-                            />
-                          </mask>
-                          <g mask="url(#mask0_4124_107)">
-                            <path
-                              d="M0 275C64.8984 251.97 276.989 209.939 560 9"
-                              stroke="#F2D364"
-                            />
-                            <path
-                              d="M0 275C64.8984 259.675 276.989 231.708 560 98"
-                              stroke="#E7E6E4"
-                              strokeDasharray="4 4"
-                            />
-                          </g>
-                          <defs>
-                            <linearGradient
-                              gradientUnits="userSpaceOnUse"
-                              id="paint0_linear_4124_107"
-                              x1="0"
-                              x2="640"
-                              y1="142"
-                              y2="142"
-                            >
-                              <stop stopColor="white" stopOpacity="0" />
-                              <stop offset="0.15" stopColor="white" />
-                              <stop offset="0.85" stopColor="white" />
-                              <stop
-                                offset="1"
-                                stopColor="white"
-                                stopOpacity="0"
-                              />
-                            </linearGradient>
-                          </defs>
-                        </svg>
-                      </div>
+
+                      <Graph view="sticky" />
                     </motion.div>
                   )}
                   {activeSection === 2 && (
@@ -476,7 +313,7 @@ export const FeaturesSection = () => {
                       exit={{ opacity: 0 }}
                       initial={{ opacity: 0 }}
                     >
-                      <SwapWithNoFees />
+                      <SwapWithNoFees view="sticky" />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -489,7 +326,134 @@ export const FeaturesSection = () => {
   );
 };
 
-const SwapWithNoFees = () => {
+const Graph = ({ view = 'static' }: { view?: 'sticky' | 'static' }) => {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, {
+    once: true,
+  });
+
+  useEffect(() => {
+    if (isInView) {
+      animate(
+        '#yellow-line',
+        {
+          pathLength: 1,
+        },
+        {
+          type: 'spring',
+          stiffness: 200,
+          damping: 100,
+        },
+      );
+      animate(
+        '#dashed-white-line',
+        {
+          pathLength: 1,
+        },
+        {
+          type: 'spring',
+          stiffness: 100,
+          damping: 90,
+          delay: 0.25,
+        },
+      );
+    }
+  }, [animate, isInView]);
+
+  return (
+    <div
+      ref={scope}
+      className="size-full [--mask-coverage:20%]"
+      style={{
+        maskImage:
+          'linear-gradient(to left, transparent, black var(--mask-coverage))',
+      }}
+    >
+      <svg
+        className="size-full"
+        fill="none"
+        height="284"
+        viewBox="0 0 561 284"
+        width="561"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 31H560" stroke="#292824" strokeDasharray="2 2"></path>
+        <path d="M0 75.4H560" stroke="#292824" strokeDasharray="2 2"></path>
+        <path d="M0 119.8H560" stroke="#292824" strokeDasharray="2 2"></path>
+        <path d="M0 164.2H560" stroke="#292824" strokeDasharray="2 2"></path>
+        <path d="M0 208.6H560" stroke="#292824" strokeDasharray="2 2"></path>
+        <path d="M0 253H560" stroke="#292824" strokeDasharray="2 2"></path>
+        <g mask={`url(#mask0_4124_107-${view})`}>
+          <motion.path
+            d="M0 275C64.8984 251.97 276.989 209.939 560 9"
+            id="yellow-line"
+            initial={{ pathLength: 0 }}
+            stroke="#F2D364"
+            transition={{
+              type: 'spring',
+              stiffness: 200,
+              damping: 100,
+            }}
+          ></motion.path>
+          <path
+            d="M0 275C64.8984 259.675 276.989 231.708 560 98"
+            mask={`url(#dashMask-${view})`}
+            stroke="#E7E6E4"
+            strokeDasharray="4 4"
+          ></path>
+        </g>
+        <mask id={`dashMask-${view}`}>
+          <rect fill="black" height="100%" width="100%"></rect>
+          <motion.path
+            d="M0 275C64.8984 259.675 276.989 231.708 560 98"
+            fill="none"
+            id="dashed-white-line"
+            initial={{ pathLength: 0 }}
+            stroke="white"
+            strokeWidth="8"
+          ></motion.path>
+        </mask>
+        <defs>
+          <linearGradient
+            gradientUnits="userSpaceOnUse"
+            id={`paint0_linear_4124_107-${view}`}
+            x1="0"
+            x2="640"
+            y1="142"
+            y2="142"
+          >
+            <stop stopColor="white" stopOpacity="0"></stop>
+            <stop offset="0.15" stopColor="white"></stop>
+            <stop offset="0.85" stopColor="white"></stop>
+            <stop offset="1" stopColor="white" stopOpacity="0"></stop>
+          </linearGradient>
+        </defs>
+        <mask
+          height="266"
+          id={`mask0_4124_107-${view}`}
+          maskUnits="userSpaceOnUse"
+          style={{ maskType: 'alpha' }}
+          width="640"
+          x="0"
+          y="9"
+        >
+          <rect
+            fill={`url(#paint0_linear_4124_107-${view})`}
+            height="266"
+            width="640"
+            y="9"
+          ></rect>
+        </mask>
+      </svg>
+    </div>
+  );
+};
+
+const SwapWithNoFees = ({
+  view = 'static',
+}: {
+  view?: 'sticky' | 'static';
+}) => {
   const [feeMode, setFeeMode] = useState<'auto' | 'custom'>('auto');
   const [broadcastMode, setBroadcastMode] = useState<
     'Priority fee' | 'MEV Shield'
@@ -560,7 +524,7 @@ const SwapWithNoFees = () => {
                   {feeMode === 'auto' && (
                     <motion.span
                       className="absolute inset-0 rounded-full bg-gray-800"
-                      layoutId="fee-mode"
+                      layoutId={`fee-mode-${view}`}
                     />
                   )}
                 </button>
@@ -575,7 +539,7 @@ const SwapWithNoFees = () => {
                   {feeMode === 'custom' && (
                     <motion.span
                       className="absolute inset-0 rounded-full bg-gray-800"
-                      layoutId="fee-mode"
+                      layoutId={`fee-mode-${view}`}
                     />
                   )}
                 </button>
@@ -614,7 +578,7 @@ const SwapWithNoFees = () => {
                   {broadcastMode === 'Priority fee' && (
                     <motion.span
                       className="absolute inset-0 rounded-full bg-gray-800"
-                      layoutId="broadcast-mode"
+                      layoutId={`broadcast-mode-${view}`}
                     />
                   )}
                 </button>
@@ -629,7 +593,7 @@ const SwapWithNoFees = () => {
                   {broadcastMode === 'MEV Shield' && (
                     <motion.span
                       className="absolute inset-0 rounded-full bg-gray-800"
-                      layoutId="broadcast-mode"
+                      layoutId={`broadcast-mode-${view}`}
                     />
                   )}
                 </button>
@@ -668,7 +632,7 @@ const SwapWithNoFees = () => {
                   {speed === 'Fast' && (
                     <motion.span
                       className="absolute inset-0 rounded-full bg-gray-800"
-                      layoutId="speed"
+                      layoutId={`speed-${view}`}
                     />
                   )}
                 </button>
@@ -683,7 +647,7 @@ const SwapWithNoFees = () => {
                   {speed === 'Faster' && (
                     <motion.span
                       className="absolute inset-0 rounded-full bg-gray-800"
-                      layoutId="speed"
+                      layoutId={`speed-${view}`}
                     />
                   )}
                 </button>
@@ -698,7 +662,7 @@ const SwapWithNoFees = () => {
                   {speed === 'Fastest' && (
                     <motion.span
                       className="absolute inset-0 rounded-full bg-gray-800"
-                      layoutId="speed"
+                      layoutId={`speed-${view}`}
                     />
                   )}
                 </button>
