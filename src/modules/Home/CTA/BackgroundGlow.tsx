@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+
 export const BackgroundGlow = ({ className }: { className?: string }) => (
   <svg
     className={className}
@@ -33,7 +35,21 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
       </mask>
       <g mask="url(#mask0_3693_1484)">
         <g filter="url(#filter0_f_3693_1484)" opacity="0.1">
-          <circle cx="756.5" cy="1733.45" fill="#F2D364" r="1375" />
+          <motion.circle
+            animate={{ opacity: [0, 1, 0] }}
+            className="hidden md:block"
+            cx="756.5"
+            cy="1733.45"
+            fill="#F2D364"
+            r="1375"
+            transition={{
+              duration: 3,
+              ease: 'easeInOut',
+              repeat: Infinity,
+              repeatType: 'loop',
+              repeatDelay: 0.3,
+            }}
+          />
           <circle
             cx="756.5"
             cy="1733.45"

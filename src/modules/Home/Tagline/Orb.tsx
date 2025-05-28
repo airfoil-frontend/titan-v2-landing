@@ -32,9 +32,6 @@ export const Orb = ({ className, ...props }: OrbProps) => {
         />
       </mask>
       <g mask="url(#mask0_4108_477)">
-        <g filter="url(#filter0_f_4108_477)" opacity="0.1">
-          <circle cx="687.5" cy="587.45" fill="#F2D364" r="550" />
-        </g>
         <circle
           cx="687.5"
           cy="607.45"
