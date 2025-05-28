@@ -43,11 +43,11 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
             fill="#F2D364"
             r="1375"
             transition={{
-              duration: 3,
+              duration: 2.9,
               ease: 'easeInOut',
               repeat: Infinity,
               repeatType: 'loop',
-              repeatDelay: 0.3,
+              repeatDelay: 0.6,
             }}
           />
           <circle
