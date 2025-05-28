@@ -15,7 +15,7 @@ import { cn } from '@/common/functions/cn';
 const aggregators = [
   {
     name: 'Titan',
-    logo: <TitanIcon />,
+    logo: <TitanIcon className="-translate-x-6" />,
     value: '$10,023.20',
     logoWidth: 88,
     logoAspect: '6.29',

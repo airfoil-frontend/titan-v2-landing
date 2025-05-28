@@ -12,7 +12,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'Titan | Home',
-  // description: 'Titan description',
+  description:
+    'Titan finds every way possible to lower fees and maximize your gains.',
   // metadataBase: new URL('https://titan.com'),
   // openGraph: {
   //   title: 'Titan',
@@ -38,7 +39,9 @@ const GlobalLayout = ({ children }: PropsWithChildren) => {
       )}
       lang="en"
     >
-      <meta content="VAPI" name="apple-mobile-web-app-title" />
+      <head>
+        <meta content="Titan" name="apple-mobile-web-app-title" />
+      </head>
       <body className="bg-bg-main text-gray-50">
         <CoreLayout>{children}</CoreLayout>
       </body>
