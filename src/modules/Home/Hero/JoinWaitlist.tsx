@@ -40,7 +40,7 @@ export const JoinWaitlist = () => {
     >
       <input
         className={cn(
-          'caret-primary flex-1 py-2 pl-3.5 text-sm font-light text-gray-50 placeholder:text-gray-400 focus-visible:outline-none',
+          'caret-primary flex-1 py-1 pl-3.5 font-light text-gray-50 placeholder:text-gray-400 focus-visible:outline-none md:py-2 md:text-sm',
           submitted && 'text-primary',
         )}
         disabled={isSubmitting || submitted}

@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, useAnimation, type Variants } from 'motion/react';
-import React, { useEffect, useState } from 'react';
+import { motion, useAnimation, useInView, type Variants } from 'motion/react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface ProgressComparisonProps {
   items: {
@@ -12,19 +12,27 @@ interface ProgressComparisonProps {
 }
 
 export function ProgressComparison({ items }: ProgressComparisonProps) {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const isInView = useInView(sectionRef, {
+    once: true,
+  });
+
   const controls = useAnimation();
   const [animationComplete, setAnimationComplete] = useState<
     Record<string, boolean>
   >({});
 
   useEffect(() => {
+    if (!isInView) return;
+
     // Start the animation after a short delay
     const timer = setTimeout(() => {
       controls.start('animate');
     }, 300);
 
     return () => clearTimeout(timer);
-  }, [controls]);
+  }, [controls, isInView]);
 
   // Animation variants for the progress bar - duration matches the actual value
   const progressVariants: Variants = {
@@ -47,7 +55,7 @@ export function ProgressComparison({ items }: ProgressComparisonProps) {
   };
 
   return (
-    <div className="space-y-8">
+    <div ref={sectionRef} className="space-y-8">
       {items.map((item) => (
         <div key={item.name} className="space-y-2.5">
           <div className="flex items-center justify-between gap-2.5">
@@ -55,12 +63,14 @@ export function ProgressComparison({ items }: ProgressComparisonProps) {
               {item.name}
             </span>
             <span className="font-mono text-base leading-[1.5rem] tracking-[.0625rem]">
-              <Counter
-                duration={item.value / 1000}
-                from={0}
-                isComplete={animationComplete[item.name]}
-                to={item.value}
-              />
+              {isInView && (
+                <Counter
+                  duration={item.value / 1000}
+                  from={0}
+                  isComplete={animationComplete[item.name]}
+                  to={item.value}
+                />
+              )}
               ms
             </span>
           </div>
