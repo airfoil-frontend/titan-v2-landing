@@ -80,7 +80,7 @@ export const FeaturesSection = () => {
                       />
                     </svg>
                   }
-                  secondaryDescription="13-15bp better than competitors."
+                  secondaryDescription="5-10 bps better than competitors."
                   title="Titan's Talos algorithm"
                 />
               </div>
@@ -158,7 +158,7 @@ export const FeaturesSection = () => {
                       />
                     </svg>
                   }
-                  secondaryDescription="30bp better than competitors."
+                  secondaryDescription="30 bps better than competitors."
                   title="Best execution"
                 />
               </div>
@@ -190,7 +190,7 @@ export const FeaturesSection = () => {
             <div className="flex flex-col gap-10 lg:gap-0">
               <div className="w-full lg:h-90">
                 <Feature
-                  description="An Auto mode without any hidden fees. Choose your broadcast method, speed, and swap."
+                  description="The lowest slippage across all Solana DEX aggregators. Live Streaming quotes that always give you the most up to date price."
                   logo={
                     <svg
                       fill="none"
@@ -207,6 +207,7 @@ export const FeaturesSection = () => {
                       />
                     </svg>
                   }
+                  secondaryDescription="30 bps better slippage than competitors."
                   title="Swap with no fees"
                 />
               </div>
