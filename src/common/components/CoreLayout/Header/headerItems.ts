@@ -5,9 +5,4 @@ export const headerItems = [
     label: 'Docs',
     external: true,
   },
-  {
-    href: '/blog',
-    label: 'Blog',
-    external: false,
-  },
 ];
