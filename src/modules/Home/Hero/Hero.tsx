@@ -19,7 +19,7 @@ export const Hero = () => {
                 'text-[2.5rem] leading-[2.8125rem] tracking-[-0.075rem]',
               )}
             >
-              For traders who want the{' '}
+              For pro traders who want the{' '}
               <br className="hidden sm:block lg:hidden" /> best price — every
               time
             </h1>
