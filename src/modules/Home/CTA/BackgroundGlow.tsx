@@ -37,7 +37,7 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
         <g filter="url(#filter0_f_3693_1484)" opacity="0.1">
           <motion.circle
             animate={{ opacity: [0, 1, 0] }}
-            className="hidden md:block"
+            className="hidden lg:block"
             cx="756.5"
             cy="1733.45"
             fill="#F2D364"
@@ -76,7 +76,7 @@ export const BackgroundGlow = ({ className }: { className?: string }) => (
 
         {/* Shimmer circles that follow the main circle paths */}
         <circle
-          className="hidden md:block"
+          className="hidden lg:block"
           cx="756.5"
           cy="1733.45"
           opacity="0.8"
