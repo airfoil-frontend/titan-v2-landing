@@ -11,7 +11,7 @@ export const ComparisonSection = () => {
 
   const isMobile = useMediaQuery('(max-width: 640px)');
   const [numberOfTrades, setNumberOfTrades] = useState(500);
-  const titanTradeValue = Math.round(numberOfTrades / 8);
+  const titanTradeValue = Math.round(numberOfTrades / 10);
   const competitorsTradeValue = Math.round(
     numberOfTrades / competitorsTradeDiv,
   );
