@@ -45,7 +45,7 @@ export const Orb = ({ className, ...props }: OrbProps) => {
           cy="607.45"
           r="549.476"
           stroke="url(#paint2_linear_4108_477)"
-          strokeOpacity="0.35"
+          strokeOpacity="0.65"
           strokeWidth="1.04795"
         />
       </g>
