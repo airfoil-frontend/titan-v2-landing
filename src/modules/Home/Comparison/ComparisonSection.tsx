@@ -7,18 +7,20 @@ import { ComparisonItem } from './ComparisonItem';
 import { TradeSlider } from './TradeSlider';
 
 export const ComparisonSection = () => {
-  const [jupiterTradeDiv, setJupiterTradeDiv] = useState(20);
+  const [competitorsTradeDiv, setCompetitorsTradeDiv] = useState(20);
 
   const isMobile = useMediaQuery('(max-width: 640px)');
   const [numberOfTrades, setNumberOfTrades] = useState(500);
   const titanTradeValue = Math.round(numberOfTrades / 8);
-  const jupiterTradeValue = Math.round(numberOfTrades / jupiterTradeDiv);
+  const competitorsTradeValue = Math.round(
+    numberOfTrades / competitorsTradeDiv,
+  );
 
   useEffect(() => {
     if (isMobile) {
-      setJupiterTradeDiv(25);
+      setCompetitorsTradeDiv(25);
     } else {
-      setJupiterTradeDiv(20);
+      setCompetitorsTradeDiv(20);
     }
   }, [isMobile]);
 
@@ -30,9 +32,8 @@ export const ComparisonSection = () => {
             Keep more of your profits
           </h2>
           <p className="text-base leading-[1.25rem] font-light tracking-[-0.01rem] text-gray-400 md:text-lg md:leading-6 md:tracking-[-0.0112rem]">
-            Nunc integer nullam ultrices in vestibulum. Augue faucibus vitae
-            quisque nisi felis. Vitae a enim ut massa et consequat. Quisque
-            sagittis eget ligula non neque turpis semper. Tristique velit lacus.
+            Titan allows you to compare quotes from all routers on Solana and
+            always routes you to the one with the best price.
           </p>
         </div>
 
@@ -51,9 +52,9 @@ export const ComparisonSection = () => {
           />
           <ComparisonItem
             className="bg-gray-700"
-            title="With Jupiter"
+            title="With Competitors"
             titleClassName="text-gray-300"
-            tradeValue={jupiterTradeValue}
+            tradeValue={competitorsTradeValue}
             value="Value here"
           />
         </div>
