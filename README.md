@@ -60,4 +60,3 @@ Prettier: <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-v
 
 
 Tailwind CSS IntelliSense: <https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss>
-
