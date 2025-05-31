@@ -44,7 +44,7 @@ export const FeaturesSection = () => {
         >
           <div className="flex flex-1 flex-col gap-[5rem] lg:gap-0">
             <div className="flex flex-col gap-10 pb-[2rem] lg:gap-0 xl:pb-[6rem]">
-              <div className="w-full lg:h-100">
+              <div className="w-full lg:h-100 [@media(min-width:1024px)_and_(max-height:1049px)_and_(min-height:670px)]:h-90">
                 <Feature
                   additionalItem={
                     <div className="text-primary flex items-center gap-2 text-base leading-6 font-light tracking-[-0.01rem] md:text-lg md:font-normal md:tracking-[-0.0112rem]">
@@ -84,7 +84,7 @@ export const FeaturesSection = () => {
                   title="Titan's Talos algorithm"
                 />
               </div>
-              <div className="[@media(min-width:1024px)_and_(min-height:950px)]:hidden">
+              <div className="[@media(min-width:1024px)_and_(min-height:670px)]:hidden">
                 <div className="mb-8 flex flex-wrap items-center gap-x-8 gap-y-4">
                   <div className="flex items-center gap-2.5">
                     <svg
@@ -133,7 +133,7 @@ export const FeaturesSection = () => {
               </div>
             </div>
             <div className="flex flex-col gap-10 pb-[2rem] lg:gap-0 xl:pb-[6rem]">
-              <div className="w-full lg:h-100">
+              <div className="w-full lg:h-100 [@media(min-width:1024px)_and_(max-height:1049px)_and_(min-height:670px)]:h-90">
                 <Feature
                   description="The lowest slippage across all Solana DEX aggregators. 800ms quote response times."
                   logo={
@@ -162,7 +162,7 @@ export const FeaturesSection = () => {
                   title="Best execution"
                 />
               </div>
-              <div className="[@media(min-width:1024px)_and_(min-height:950px)]:hidden">
+              <div className="[@media(min-width:1024px)_and_(min-height:670px)]:hidden">
                 <div className="border-b border-[rgba(39,_39,_42,_0.80)] py-4 font-mono text-sm font-medium tracking-[.0625rem] uppercase">
                   Quote update time
                 </div>
@@ -211,14 +211,14 @@ export const FeaturesSection = () => {
                   title="Swap with no fees"
                 />
               </div>
-              <div className="[@media(min-width:1024px)_and_(min-height:950px)]:hidden">
+              <div className="[@media(min-width:1024px)_and_(min-height:670px)]:hidden">
                 <SwapWithNoFees />
               </div>
             </div>
           </div>
-          <div className="hidden [@media(min-width:1024px)_and_(min-height:950px)]:block">
-            <div className="sticky top-[calc(var(--header-height)+20rem)] grid place-items-center">
-              <div className="relative grid w-[28rem] place-items-center xl:w-[37.5rem]">
+          <div className="hidden [@media(min-width:1024px)_and_(min-height:670px)]:block">
+            <div className="sticky top-[calc(var(--header-height)+20rem)] grid place-items-center [@media(min-width:1024px)_and_(max-height:1049px)_and_(min-height:670px)]:top-[calc(var(--header-height)+12rem)]">
+              <div className="relative grid w-[28rem] place-items-center xl:w-[37.5rem] [@media(min-width:1024px)_and_(max-height:849px)_and_(min-height:670px)]:w-[32rem]">
                 <AnimatePresence initial={false} mode="popLayout">
                   {activeSection === 1 && (
                     <motion.div
