@@ -15,7 +15,7 @@ import { cn } from '@/common/functions/cn';
 const aggregators = [
   {
     name: 'Titan',
-    logo: <TitanIcon className="-translate-x-6" />,
+    logo: <TitanIcon className="h-9.5 -translate-x-6" />,
     value: '$10,023.20',
     logoWidth: 88,
     logoAspect: '6.29',
@@ -179,7 +179,7 @@ export const PriceTable = () => {
                   layout
                   animate={{ opacity: 1 }}
                   className={cn(
-                    'flex border-b border-gray-800 p-4',
+                    'flex items-center border-b border-gray-800 p-4',
                     aggregator.logo ? 'justify-between' : 'justify-end',
                   )}
                   exit={{ opacity: 0 }}
