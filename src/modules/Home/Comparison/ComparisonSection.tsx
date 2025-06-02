@@ -52,7 +52,7 @@ export const ComparisonSection = () => {
             value="Value here"
           />
           <ComparisonItem
-            className="bg-gray-700"
+            className="bg-gray-800"
             title="With Competitors"
             titleClassName="text-gray-300"
             tradeValue={competitorsTradeValue}
