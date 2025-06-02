@@ -44,7 +44,8 @@ export const ComparisonSection = () => {
 
         <div className="flex w-full flex-col items-start gap-6 sm:gap-8">
           <ComparisonItem
-            className="bg-primary"
+            // drop-shadow-[0_2px_8px_rgb(242_211_99_/_0.15)]
+            className="bg-[linear-gradient(270deg,_var(--primary-darken,_#FFCD1A)_0%,_var(--primary,_#F2D364)_100%)]"
             title="With Titan"
             titleClassName="text-primary"
             tradeValue={titanTradeValue}
