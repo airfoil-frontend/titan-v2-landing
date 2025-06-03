@@ -16,8 +16,8 @@ export const PriceSection = () => {
               Solana&apos;s original meta DEX aggregator
             </h2>
             <p className="text-base leading-[1.25rem] font-light tracking-[-0.01rem] text-gray-400 md:text-lg md:leading-6 md:tracking-[-1%]">
-              Titan finds the best price across Talos, Jupiter, DeFlow,
-              Hashflow, and every other router on Solana.
+              Titan compares quotes from multiple Solana routers and routes you
+              to the one with the best price.
             </p>
           </div>
         </div>
