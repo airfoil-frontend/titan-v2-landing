@@ -11,7 +11,9 @@ export const CoreLayout = ({
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex flex-1 flex-col [&>*]:flex-1">{children}</main>
+      <main className="flex min-h-[15rem] flex-1 flex-col [&>*]:flex-1">
+        {children}
+      </main>
       <Footer />
     </div>
   );
