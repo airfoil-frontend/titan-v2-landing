@@ -81,7 +81,7 @@ export const FeaturesSection = () => {
                     </svg>
                   }
                   secondaryDescription="5-10 bps better than competitors."
-                  title="Titan's Talos algorithm"
+                  title="Titan's Kairos algorithm"
                 />
               </div>
               <div className="[@media(min-width:1024px)_and_(min-height:670px)]:hidden">
@@ -103,7 +103,7 @@ export const FeaturesSection = () => {
                       />
                     </svg>
                     <span className="font-mono text-base leading-4 font-medium">
-                      Titan’s Talos
+                      Titan’s Kairos
                     </span>
                   </div>
                   <div className="flex items-center gap-2.5">
@@ -158,7 +158,7 @@ export const FeaturesSection = () => {
                       />
                     </svg>
                   }
-                  secondaryDescription="30 bps better than competitors."
+                  // secondaryDescription="30 bps better than competitors."
                   title="Best execution"
                 />
               </div>
@@ -246,7 +246,7 @@ export const FeaturesSection = () => {
                             />
                           </svg>
                           <span className="font-mono text-base leading-4 font-medium">
-                            Titan’s Talos
+                            Titan’s Kairos
                           </span>
                         </div>
                         <div className="flex items-center gap-2.5">
